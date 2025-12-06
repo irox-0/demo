@@ -9,8 +9,8 @@ The application provides a REST API for working with users, including capabiliti
 
 ## Technologies
 
-- **Java 21**
-- **Spring Boot 3.3.2**
+- **Java 24**
+- **Spring Boot 3.4.0**
 - **Spring Web** - for creating REST API
 - **Spring Data JPA** - for database interaction
 - **H2 Database** - in-memory database
@@ -22,7 +22,7 @@ The application provides a REST API for working with users, including capabiliti
 ```
 src/
 ├── main/
-│   ├── java/com/example/demo/
+│   ├── java/demo/
 │   │   ├── DemoApplication.java          # Main class
 │   │   ├── controller/
 │   │   │   └── UserController.java       # REST controller
@@ -38,8 +38,14 @@ src/
 │       ├── application.properties        # Properties file
 │       └── data.sql                      # SQL script with initial data
 └── test/
-    └── java/com/example/demo/
-        └── DemoApplicationTests.java     # Tests
+    └── java/demo/                             # Tests
+        ├── DemoApplicationTest.java          
+        ├── controller/
+        │   └── UserControllerTest.java       
+        ├── repository/
+        │   └── UserRepositoryTest.java       
+        └── service/
+            └── UserServiceTest.java          
 ```
 
 ## Data Model
@@ -146,8 +152,8 @@ Returns a list of users with age >= specified value, sorted by first name in alp
 ## Running the Application
 
 ### Prerequisites
-- Java 21 or higher
-- Maven 3.6 or higher
+- Java 24 or higher
+- Maven 3.9.11 or higher
 
 ### Local Setup
 
@@ -237,6 +243,7 @@ spring:
     hibernate:
       ddl-auto: create-drop
     defer-datasource-initialization: true
+    open-in-view: false
 ```
 
 ## Development

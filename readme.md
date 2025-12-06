@@ -38,14 +38,15 @@ src/
 │       ├── application.properties        # Properties file
 │       └── data.sql                      # SQL script with initial data
 └── test/
-    └── java/demo/                             # Tests
-        ├── DemoApplicationTest.java          
-        ├── controller/
-        │   └── UserControllerTest.java       
-        ├── repository/
-        │   └── UserRepositoryTest.java       
-        └── service/
-            └── UserServiceTest.java          
+    ├── java/demo/                        # Tests
+    │   ├── DemoApplicationTest.java      
+    │   ├── controller/
+    │   │   └── UserControllerTest.java       
+    │   ├── repository/
+    │   │   └── UserRepositoryTest.java       
+    │   └── service/
+    │       └── UserServiceTest.java          
+    └── resources/
 ```
 
 ## Data Model

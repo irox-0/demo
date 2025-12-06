@@ -1,7 +1,8 @@
-package com.example.demo.service;
+package demo.service;
 
-import com.example.demo.entity.User;
-import com.example.demo.repository.UserRepository;
+import demo.entity.User;
+import demo.repository.UserRepository;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,7 +14,6 @@ import java.util.List;
 public class UserService {
     private final UserRepository userRepository;
 
-    @Transactional
     public List<User> findAllUsers() {
         return userRepository.findAll();
     }
@@ -23,7 +23,6 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    @Transactional
     public List<User> findByAgeGreaterThanEqualOrderByFirstNameAsc(Integer age){
         return userRepository.findByAgeGreaterThanEqualOrderByFirstNameAsc(age);
     };

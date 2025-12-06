@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package demo.entity;
 
 public enum Country {
     RUSSIA, BELARUS, ARMENIA, CHINA, USA

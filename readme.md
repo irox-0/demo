@@ -9,7 +9,7 @@ The application provides a REST API for working with users, including capabiliti
 
 ## Technologies
 
-- **Java 24**
+- **Java 21**
 - **Spring Boot 3.4.0**
 - **Spring Web** - for creating REST API
 - **Spring Data JPA** - for database interaction
